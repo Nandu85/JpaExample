@@ -27,6 +27,7 @@ public class XmplServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		System.out.println("hiiiiiiii");
+		System.out.println("");
 	}
 
 	/**
