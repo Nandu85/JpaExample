@@ -22,9 +22,12 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
-        <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="Testunit" />
+          <factory-entry name="managerFactoryBean" />
+        </datasource-mapping>
         <naming-strategy-map />
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml.bkp" />
       </configuration>
     </facet>
   </component>
@@ -89,5 +92,8 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.ibm.icu:icu4j:61.1" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.29" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.19.4" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-jpa:2.7.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:2.7.1" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.32" level="project" />
   </component>
 </module>

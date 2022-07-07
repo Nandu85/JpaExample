@@ -9,13 +9,15 @@ import java.util.List;
 public class MainClass {
 
     public static void main(String[] args) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Testunit");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistenceUnit");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
 
         transaction.begin();
 
         List<String> results = entityManager.createQuery("select u.credential.username from UserObject u").getResultList();
+
+
 
         System.out.println(results);
 
@@ -29,6 +31,12 @@ public class MainClass {
 //            user.setCredential(credential);
 //            entityManager.persist(user);
 //        }
+//
+            for (int i=1;i<=11;i++){
+                Company company = new Company("nar_b"+i,"nar"+i+"owned",2.56+i/2,50*i);
+
+                entityManager.persist(company);
+            }
 
 //        Address address = new Address();
 //        address.setCity("ahemdabad");

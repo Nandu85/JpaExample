@@ -11,6 +11,17 @@ public class Address {
     String country;
     String zip;
 
+    public Address(String street, String city, String state, String country, String zip) {
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        this.zip = zip;
+    }
+
+    public Address() {
+    }
+
     public String getStreet() {
         return street;
     }

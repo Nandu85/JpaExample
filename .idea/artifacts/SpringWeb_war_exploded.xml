@@ -56,6 +56,9 @@
           <element id="library" level="project" name="Maven: com.ibm.icu:icu4j:61.1" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.29" />
           <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.19.4" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:2.7.1" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:2.7.1" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.32" />
         </element>
       </element>
       <element id="directory" name="META-INF">

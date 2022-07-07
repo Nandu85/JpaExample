@@ -8,7 +8,7 @@ public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int bookid;
+    private Long bookid;
 
     @Column(nullable = false)
     private String bookName;
@@ -19,15 +19,15 @@ public class Book {
     private Date createdOn;
 
 //    @Transient
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST})
     @JoinColumn(name = "sId")
     private Student student;
 
-    public int getBookid() {
+    public Long getBookid() {
         return bookid;
     }
 
-    public void setBookid(int bookid) {
+    public void setBookid(Long bookid) {
         this.bookid = bookid;
     }
 

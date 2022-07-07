@@ -9,7 +9,7 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 //    @Column(columnDefinition = "default 2")
-    private int sId = 2;
+    private Long sId = 2L;
 
     @Column(nullable = false)
     private String name;
@@ -17,10 +17,10 @@ public class Student {
     @Column(unique = true)
     private String course;
 
-    @OneToMany(cascade = {CascadeType.PERSIST},
+    @OneToMany/*(cascade = {CascadeType.PERSIST}),
 //            fetch = FetchType.EAGER,
 //            orphanRemoval = true,
-            mappedBy = "student")
+            mappedBy = "student"*/
     private List<Book> books;
 
     @Embedded
@@ -34,11 +34,11 @@ public class Student {
         this.address = address;
     }
 
-    public int getsId() {
+    public Long getsId() {
         return sId;
     }
 
-    public void setsId(int sId) {
+    public void setsId(Long sId) {
         this.sId = sId;
     }
 

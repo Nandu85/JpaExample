@@ -2,14 +2,22 @@ package com.example.springwebannoted;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.persistence.*;
 import java.io.File;
 
+@Entity
 public class Company {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int comId;
+    @Column
     private String comName;
+    @Column
     private String comOwner;
+    @Column
     private double comValue;
+    @Column
     private int comStrength;
 
     public Company() {
@@ -22,15 +30,15 @@ public class Company {
         this.comStrength = comStrength;
     }
 
-    public MultipartFile getFile() {
-        return file;
-    }
+//    public MultipartFile getFile() {
+//        return file;
+//    }
+//
+//    public void setFile(MultipartFile file) {
+//        this.file = file;
+//    }
 
-    public void setFile(MultipartFile file) {
-        this.file = file;
-    }
-
-    private MultipartFile file;
+    //private MultipartFile file;
 
     public int getComId() {
         return comId;
